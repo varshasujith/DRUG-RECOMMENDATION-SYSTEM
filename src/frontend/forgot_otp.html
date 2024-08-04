@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #021d3c, #103d6d); /* Background gradient */
+            color: white;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+        #otp-container {
+            width: 400px;
+            margin: 100px auto;
+            padding: 40px;
+            background-color: #388185; /* Container background color */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+        input[type="email"],
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 5px;
+            box-sizing: border-box;
+            background: rgba(255, 255, 255, 0.2);
+            color: rgb(17, 15, 15);
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f3c155;
+            color: black;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+        }
+        button:hover {
+            background-color: #B18A30;
+        }
+        label {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: rgb(17, 16, 16);
+            text-align: left;
+            display: block;
+            margin-bottom: 10px;
+        }
+        h2 {
+            text-transform: uppercase;
+            text-align: center;
+            color: rgb(24, 23, 23);
+            font-family: "Boulder", boulder;
+            font-size: 38px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        a {
+            text-decoration: none;
+            color: black; /* Link color */
+        }
+    </style>
+</head>
+<body>
+    <div id="otp-container">
+        <h2>OTP Verification</h2>
+        <form id="otpForm" action="http://localhost:5000/api/v1/auth/otp_verification" method="POST">
+            <div class="input-container">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-container">
+                <label for="otp">OTP:</label>
+                <input type="text" id="otp" name="otp" placeholder="Enter your OTP" required>
+            </div>
+            <button type="submit">Verify OTP</button>
+        </form>
+    </div>
+
+    <script src="/script_verify.js"></script>
+</body>
+</html>

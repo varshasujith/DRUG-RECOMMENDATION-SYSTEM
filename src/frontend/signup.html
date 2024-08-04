@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #021d3c, #103d6d); /* Background gradient */
+            color: white;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+        #logo {
+            height: 100px;
+            width: 100px;
+            border-radius: 7px;
+            display: block;
+            margin: 20px auto;
+        }
+        #signup-container {
+            width: 400px;
+            margin: 100px auto;
+            padding: 40px;
+            background-color: #388185; /* Container background color */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 5px;
+            box-sizing: border-box;
+            background: rgba(255, 255, 255, 0.2);
+            color: rgb(17, 15, 15);
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f3c155;
+            color: black;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+        }
+        button:hover {
+            background-color: #B18A30;
+        }
+        label {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: rgb(17, 16, 16);
+            text-align: left;
+            display: block;
+            margin-bottom: 10px;
+        }
+        h2 {
+            text-transform: uppercase;
+            text-align: center;
+            color: rgb(24, 23, 23);
+            font-family: "Boulder", boulder;
+            font-size: 38px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .input-container {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="signup-container">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="input-container">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="Email" required><br>
+                </div>
+                <div class="input-container">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="Password" required><br>
+                </div>
+                <div class="input-container">
+                    <label for="confirm_password">Confirm Password:</label>
+                    <input type="password" id="confirm_password" name="ConfirmPassword" required><br>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/signup.js"></script>
+</body>
+</html>
